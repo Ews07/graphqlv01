@@ -1,17 +1,17 @@
-const GQL_ENDPOINT = "https://learn.zone01oujda.ma/api/graphql-engine/v1/graphql";
-
 export async function graphqlQuery(query, variables = {}) {
-  const res = await fetch(GQL_ENDPOINT, {
+  const response = await fetch("/api/graphql-engine/v1/graphql", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    credentials: "include", // send JWT cookie
-    body: JSON.stringify({ query, variables })
+    headers: {
+      "Content-Type": "application/json",
+    },
+    credentials: "include",
+    body: JSON.stringify({ query, variables }),
   });
 
-  const json = await res.json();
-  if (json.errors) throw new Error(JSON.stringify(json.errors));
-  return json.data;
+  if (!response.ok) throw new Error("GraphQL query failed");
+  return response.json();
 }
+
 
 // Queries
 export const USER_QUERY = `

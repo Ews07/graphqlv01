@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Zone01 Profile</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body>
+    <div id="app">
+        <!-- Login Form -->
+        <div id="login-section">
+            <h1>Login</h1>
+            <input type="text" id="username" placeholder="Username or Email" />
+            <input type="password" id="password" placeholder="Password" />
+            <button id="login-btn">Login</button>
+            <p id="login-error" class="error"></p>
+        </div>
+
+        <!-- Profile Section -->
+        <div id="profile-section" class="hidden">
+            <button id="logout-btn">Logout</button>
+            <h1>Welcome, <span id="user-login"></span></h1>
+
+            <div class="section">
+                <h2>XP</h2>
+                <p>Total XP: <span id="xp-total"></span></p>
+                <div id="xp-graph"></div>
+            </div>
+
+            <div class="section">
+                <h2>Audit Ratio</h2>
+                <p>Ratio: <span id="audit-ratio"></span></p>
+                <div id="audit-graph"></div>
+            </div>
+
+            <div class="section">
+                <h2>Skills</h2>
+                <div id="skills-graph"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>

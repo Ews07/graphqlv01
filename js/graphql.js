@@ -35,7 +35,7 @@ export const AUDIT_QUERY = `
 
 export const SKILLS_QUERY = `
   {
-    transaction(where: { type: { _eq: "skill" }}) {
+    transaction(where: { type: { _regex: "skill" }}) {
       type amount path
     }
   }

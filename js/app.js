@@ -1,4 +1,4 @@
-import { login, logout } from "./auth.js";
+import { login} from "./auth.js";
 import { graphqlQuery, USER_QUERY, XP_QUERY, AUDIT_QUERY, SKILLS_QUERY } from "./graphql.js";
 import { showLoginError, toggleView, setUserLogin, setXP, setAudit } from "./ui.js";
 import { renderXPGraph, renderAuditGraph, renderSkillsGraph } from "./charts.js";
